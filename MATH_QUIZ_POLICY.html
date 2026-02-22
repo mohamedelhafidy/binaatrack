@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Math Quiz</title>
+  <meta name="description" content="Privacy Policy for the Math Quiz mobile application by INFOWA7FID." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ─────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #0f1117;
+      --surface:   #181a20;
+      --card:      #1e2028;
+      --border:    rgba(255,255,255,.06);
+      --text:      #e2e4ea;
+      --text-dim:  #8b8fa3;
+      --accent:    #6c63ff;
+      --accent-g:  linear-gradient(135deg, #6c63ff, #a855f7);
+      --radius:    16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Animated Background ──────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 10%, rgba(108,99,255,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 90%, rgba(168,85,247,.10) 0%, transparent 70%);
+    }
+
+    /* ── Hero ─────────────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 48px;
+      animation: fadeDown .8s ease-out;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 100px;
+      background: rgba(108,99,255,.12);
+      color: var(--accent);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border: 1px solid rgba(108,99,255,.2);
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: var(--accent-g);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: var(--text-dim);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Container ────────────────────────────────── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── Table of Contents ────────────────────────── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      animation: fadeUp .6s ease-out .2s both;
+    }
+
+    .toc h2 {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 8px 24px;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: .92rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      transition: color .25s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 22px;
+    }
+
+    .toc a:hover { color: var(--accent); }
+
+    /* ── Section Cards ────────────────────────────── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 36px 32px;
+      margin-bottom: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp .55s ease-out forwards;
+    }
+
+    .section:nth-child(2)  { animation-delay: .30s; }
+    .section:nth-child(3)  { animation-delay: .35s; }
+    .section:nth-child(4)  { animation-delay: .40s; }
+    .section:nth-child(5)  { animation-delay: .45s; }
+    .section:nth-child(6)  { animation-delay: .50s; }
+    .section:nth-child(7)  { animation-delay: .55s; }
+    .section:nth-child(8)  { animation-delay: .60s; }
+    .section:nth-child(9)  { animation-delay: .65s; }
+    .section:nth-child(10) { animation-delay: .70s; }
+    .section:nth-child(11) { animation-delay: .75s; }
+    .section:nth-child(12) { animation-delay: .80s; }
+
+    .section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section h2 .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(108,99,255,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section h2 .icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent);
+    }
+
+    .section p, .section li {
+      color: var(--text-dim);
+      font-size: .95rem;
+    }
+
+    .section p + p { margin-top: 14px; }
+
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 14px 0;
+    }
+
+    .section ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-g);
+    }
+
+    .section a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity .25s;
+    }
+
+    .section a:hover { opacity: .75; }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      border-radius: 8px;
+      background: rgba(108,99,255,.1);
+      border: 1px solid rgba(108,99,255,.18);
+      font-size: .88rem;
+    }
+
+    /* ── Footer ───────────────────────────────────── */
+    .footer {
+      text-align: center;
+      padding: 40px 20px 48px;
+      color: var(--text-dim);
+      font-size: .82rem;
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── Scroll-to-top ────────────────────────────── */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--accent-g);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      transform: translateY(8px);
+      box-shadow: 0 4px 20px rgba(108,99,255,.35);
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .scroll-top svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    /* ── Keyframes ─────────────────────────────────── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero { padding: 56px 16px 32px; }
+      .section { padding: 24px 20px 22px; }
+      .toc { padding: 20px 18px; }
+      .toc ol { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      Math Quiz
+    </div>
+    <h1>Privacy Policy</h1>
+    <p>This privacy policy applies to the <strong>Math Quiz</strong> app created by <strong>INFOWA7FID</strong> as an Ad Supported service, intended for use "AS IS".</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#info-collection">Information Collection and Use</a></li>
+        <li><a href="#third-party">Third Party Access</a></li>
+        <li><a href="#opt-out">Opt-Out Rights</a></li>
+        <li><a href="#data-retention">Data Retention Policy</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security &amp; Confidentiality</a></li>
+        <li><a href="#links">Links to Other Sites</a></li>
+        <li><a href="#modifications">Modifications</a></li>
+        <li><a href="#contact">Connect With Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 ── Information Collection and Use -->
+    <section class="section" id="info-collection">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></span>
+        Information Collection and Use
+      </h2>
+      <p>The Application collects information when you download and use it. This information may include:</p>
+      <ul>
+        <li>Your device's Internet Protocol address (e.g. IP address)</li>
+        <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
+        <li>The time spent on the Application</li>
+        <li>The operating system you use on your mobile device</li>
+      </ul>
+      <p>The Application does not gather precise information about the location of your mobile device.</p>
+      <p>The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.</p>
+      <p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information. The information that the Service Provider request will be retained by them and used as described in this privacy policy.</p>
+    </section>
+
+    <!-- 2 ── Third Party Access -->
+    <section class="section" id="third-party">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>
+        Third Party Access
+      </h2>
+      <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+      <p>The Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a></li>
+      </ul>
+      <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+      <ul>
+        <li>As required by law, such as to comply with a subpoena, or similar legal process;</li>
+        <li>When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+        <li>With their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+      </ul>
+    </section>
+
+    <!-- 3 ── Opt-Out Rights -->
+    <section class="section" id="opt-out">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+        Opt-Out Rights
+      </h2>
+      <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
+    </section>
+
+    <!-- 4 ── Data Retention Policy -->
+    <section class="section" id="data-retention">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/></svg></span>
+        Data Retention Policy
+      </h2>
+      <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:elhafidymoh@gmail.com" class="email-link">elhafidymoh@gmail.com</a> and they will respond in a reasonable time.</p>
+    </section>
+
+    <!-- 5 ── Children -->
+    <section class="section" id="children">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+        Children
+      </h2>
+      <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+      <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (<a href="mailto:elhafidymoh@gmail.com" class="email-link">elhafidymoh@gmail.com</a>) so that they will be able to take the necessary actions.</p>
+    </section>
+
+    <!-- 6 ── Security & Confidentiality -->
+    <section class="section" id="security">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
+        Security &amp; Confidentiality of Information
+      </h2>
+      <p>This application does not share user data with other companies or organizations.</p>
+    </section>
+
+    <!-- 7 ── Links to Other Sites -->
+    <section class="section" id="links">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
+        Links to Other Sites
+      </h2>
+      <p>'Math Quiz' contains links to other websites. If you click on a third-party link, you will be directed to the site. Note that these sites are not operated by us. Therefore, we advise you to review the privacy policies of these sites as we have no control or responsibility over the content, privacy policies or practices of any such external sites.</p>
+    </section>
+
+    <!-- 8 ── Modifications -->
+    <section class="section" id="modifications">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></span>
+        Modifications to the Privacy Policy
+      </h2>
+      <p>We may amend the terms of the Privacy Policy from time to time, so we ask that you review this page periodically in anticipation of any changes that may occur to it. The new changes will be effective immediately after they are added to this page.</p>
+    </section>
+
+    <!-- 9 ── Connect With Us -->
+    <section class="section" id="contact">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+        Connect With Us
+      </h2>
+      <p>We welcome all comments, inquiries and suggestions regarding the 'Math Quiz' privacy policy to the email <a href="mailto:elhafidymoh@gmail.com" class="email-link">elhafidymoh@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 INFOWA7FID &mdash; Math Quiz. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+
+  <script>
+    // Scroll-to-top visibility
+    const btn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
